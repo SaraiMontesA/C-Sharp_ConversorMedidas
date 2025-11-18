@@ -113,24 +113,34 @@ static void MenuOpcion1()
 	// Lógica para la opción 1
 	Sangria(1);
 	Console.WriteLine("Has seleccionado convertir Celsius a Fahrenheit.");
+	Pausar();
 }
 static void MenuOpcion2()
 {
 	// Lógica para la opción 2
 	Sangria(1);
 	Console.WriteLine("Has seleccionado convertir Kilómetros a Millas.");
+	Pausar();
 }
 static void MenuOpcion3()
 {
 	// Lógica para la opción 3
 	Sangria(1);
 	Console.WriteLine("Has seleccionado convertir Kilogramos a Libras.");
+	Pausar();
 }
 static void MenuOpcion4()
 {
 	// Lógica para la opción 4
 	Sangria(1);
 	Console.WriteLine("Saliendo del programa. ¡Hasta luego!");
+	Pausar();
+}
+static void Pausar()
+{
+	Sangria(1);
+	Console.WriteLine("Pulsa Enter para continuar...");
+	Console.ReadLine();
 }
 
 // ###################################################################################
@@ -148,9 +158,7 @@ static void ProgramaPrincipal()
 		MenuImprimir();									// Llamada a la función que muestra el menú
 		NumeroElegido = MenuSolicitarNumero();			// Llamada a la función que solicita el número
 		MenuProcesarOpcion(NumeroElegido);				// Llamada a la función que procesa la opción seleccionada
-		// Mensaje "Pulsa una tecla para continuar..."
-		Console.WriteLine("Pulsa una tecla para continuar...");
-		Console.ReadKey();
+
 		Pie();											// Llamada a la función que pone el pie
 	}
 }

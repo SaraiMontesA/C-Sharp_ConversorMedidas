@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sarai\\.nuget\\packages\\": {}
+    "C:\\Users\\berdi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sarai\\Documents\\Programacion\\C#\\CsharpProjects\\Conversor\\Conversor.csproj",
+      "projectUniqueName": "C:\\Users\\berdi\\Documents\\Sarai\\Personal\\Programacion\\C#\\C-Sharp_Proyectos\\Conversor\\Conversor.csproj",
       "projectName": "Conversor",
-      "projectPath": "C:\\Users\\sarai\\Documents\\Programacion\\C#\\CsharpProjects\\Conversor\\Conversor.csproj",
-      "packagesPath": "C:\\Users\\sarai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sarai\\Documents\\Programacion\\C#\\CsharpProjects\\Conversor\\obj\\",
+      "projectPath": "C:\\Users\\berdi\\Documents\\Sarai\\Personal\\Programacion\\C#\\C-Sharp_Proyectos\\Conversor\\Conversor.csproj",
+      "packagesPath": "C:\\Users\\berdi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\berdi\\Documents\\Sarai\\Personal\\Programacion\\C#\\C-Sharp_Proyectos\\Conversor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sarai\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\berdi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -38,11 +38,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -64,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

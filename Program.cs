@@ -6,7 +6,10 @@
 // ########## 	Descripción:	Programa conversor de medidas				##########
 // ###################################################################################
 
-// Función que muestra la cabecera
+// ###################################################################################
+// ########## 	Funciones de cabecera, sangría y pie						##########
+// ###################################################################################
+
 static void Cabecera()
 {
 	Console.Clear();	// Con esta línea limpiamos la pantalla
@@ -26,7 +29,7 @@ static void Sangria(int sencilla)
 	if (sencilla == 2)
 		Console.Write("          ");
 }
-// Función que muestra el pie
+
 static void Pie()
 {
     Console.WriteLine("");
@@ -38,7 +41,11 @@ static void Pie()
     Console.WriteLine("");
 }
 
-static void ImprimeMenu()
+// ###################################################################################
+// ########## 	Funciones del menú											##########
+// ###################################################################################
+
+static void MenuImprimir()
 {
 	Sangria(1);
 	Console.WriteLine("Por favor, selecciona la conversión que deseas realizar:");
@@ -53,25 +60,61 @@ static void ImprimeMenu()
 	Console.WriteLine("");
 }
 
-static int SolicitaNumero()
+static int MenuSolicitarNumero()
 {
 	Sangria(1);
     Console.Write("Selecciona una opción entre 1 y 4 y pulsa Enter: ");
 	string? input = Console.ReadLine();	// Leer la entrada del usuario
-	
-	if (int.TryParse(input, out int numero))
-    {
-		while (numero < 1 || numero > 4)
-		{
-	//		Console.Write(" Opción no válida. Por favor, selecciona una opción entre 1 y 4: ");
-	//		input = Console.ReadLine();
-		}
+	int numero = MenuValidarEntrada(input);
+	while (numero < 1 || numero > 4)
+	{
 		Sangria(2);
-        Console.WriteLine($"Has seleccionado la opción {numero}.");
-    }
-
+		Console.Write("Opción no válida. Por favor, selecciona una opción entre 1 y 4: ");
+		string? input2 = Console.ReadLine();	// Leer la entrada del usuario
+		numero = MenuValidarEntrada(input2);
+		if (numero >= 1 && numero <= 4)
+			return numero;
+	}
 	return numero;
 }
+
+static int MenuValidarEntrada(string? input)
+{
+	int numero = int.TryParse(input, out int result) ? result : 0;
+	if (numero < 1 || numero > 4)
+		return -1; // Indicar que la entrada no es válida
+	return numero;	// Entrada válida
+}
+
+static void MenuProcesarOpcion(int opcion)
+{
+	switch (opcion)
+	{
+		case 1:
+			// Lógica para convertir Celsius a Fahrenheit
+			Console.WriteLine("Has seleccionado convertir Celsius a Fahrenheit.");
+			break;
+		case 2:
+			// Lógica para convertir Kilómetros a Millas
+			Console.WriteLine("Has seleccionado convertir Kilómetros a Millas.");
+			break;
+		case 3:
+			// Lógica para convertir Kilogramos a Libras
+			
+			break;
+		case 4:
+			// Salir del programa
+			Console.WriteLine("Saliendo del programa. ¡Hasta luego!");
+			break;
+		default:
+			// Opción no válida
+			break;
+	}
+}	
+
+// ###################################################################################
+// ########## 	Funcion principal											##########
+// ###################################################################################
 
 // Programa principal
 static void ProgramaPrincipal()
@@ -79,8 +122,9 @@ static void ProgramaPrincipal()
 	int NumeroElegido = 0;	// Declaramos una variable de tipo numérico y la inicializamos a 0
 	// Aquí voy a poner el código del main
 	Cabecera();										// Llamada a la función que pone la cabecera
-	ImprimeMenu();									// Llamada a la función que muestra el menú
-	NumeroElegido = SolicitaNumero();								// Llamada a la función que solicita el número
+	MenuImprimir();									// Llamada a la función que muestra el menú
+	NumeroElegido = MenuSolicitarNumero();			// Llamada a la función que solicita el número
+	MenuProcesarOpcion(NumeroElegido);				// Llamada a la función que procesa la opción seleccionada
 	Pie();											// Llamada a la función que pone el pie
 }
 

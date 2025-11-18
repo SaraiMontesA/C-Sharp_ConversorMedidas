@@ -139,8 +139,20 @@ static void MenuOpcion4()
 static void Pausar()
 {
 	Sangria(1);
-	Console.WriteLine("Pulsa Enter para continuar...");
-	Console.ReadLine();
+	// Mostrar el mensaje en la misma línea y esperar explícitamente la tecla Enter.
+	Console.Write("Pulsa Enter para continuar...");
+
+	// Consumir cualquier tecla pendiente en el buffer de entrada para evitar
+	// que un Enter previo haga que la pausa se salte inmediatamente.
+	while (Console.KeyAvailable)
+		Console.ReadKey(true);
+
+	// Esperar hasta que el usuario pulse Enter.
+	while (Console.ReadKey(true).Key != ConsoleKey.Enter)
+	{
+		// no hacer nada; seguir esperando
+	}
+	Console.WriteLine();
 }
 
 // ###################################################################################

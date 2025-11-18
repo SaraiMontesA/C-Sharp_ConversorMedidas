@@ -90,27 +90,48 @@ static void MenuProcesarOpcion(int opcion)
 {
 	switch (opcion)
 	{
-		case 1:
-			// Lógica para convertir Celsius a Fahrenheit
-			Console.WriteLine("Has seleccionado convertir Celsius a Fahrenheit.");
+		case 1:	// Lógica para convertir Celsius a Fahrenheit
+			MenuOpcion1();
 			break;
-		case 2:
-			// Lógica para convertir Kilómetros a Millas
-			Console.WriteLine("Has seleccionado convertir Kilómetros a Millas.");
+		case 2:	// Lógica para convertir Kilómetros a Millas
+			MenuOpcion2();
 			break;
-		case 3:
-			// Lógica para convertir Kilogramos a Libras
-			
+		case 3:	// Lógica para convertir Kilogramos a Libras
+			MenuOpcion3();
 			break;
-		case 4:
-			// Salir del programa
-			Console.WriteLine("Saliendo del programa. ¡Hasta luego!");
+		case 4:	// Salir del programa
+			MenuOpcion4();
 			break;
 		default:
 			// Opción no válida
 			break;
 	}
-}	
+}
+
+static void MenuOpcion1()
+{
+	// Lógica para la opción 1
+	Sangria(1);
+	Console.WriteLine("Has seleccionado convertir Celsius a Fahrenheit.");
+}
+static void MenuOpcion2()
+{
+	// Lógica para la opción 2
+	Sangria(1);
+	Console.WriteLine("Has seleccionado convertir Kilómetros a Millas.");
+}
+static void MenuOpcion3()
+{
+	// Lógica para la opción 3
+	Sangria(1);
+	Console.WriteLine("Has seleccionado convertir Kilogramos a Libras.");
+}
+static void MenuOpcion4()
+{
+	// Lógica para la opción 4
+	Sangria(1);
+	Console.WriteLine("Saliendo del programa. ¡Hasta luego!");
+}
 
 // ###################################################################################
 // ########## 	Funcion principal											##########
@@ -121,11 +142,17 @@ static void ProgramaPrincipal()
 {	
 	int NumeroElegido = 0;	// Declaramos una variable de tipo numérico y la inicializamos a 0
 	// Aquí voy a poner el código del main
-	Cabecera();										// Llamada a la función que pone la cabecera
-	MenuImprimir();									// Llamada a la función que muestra el menú
-	NumeroElegido = MenuSolicitarNumero();			// Llamada a la función que solicita el número
-	MenuProcesarOpcion(NumeroElegido);				// Llamada a la función que procesa la opción seleccionada
-	Pie();											// Llamada a la función que pone el pie
+	while (NumeroElegido != 4)	// Bucle que se repite hasta que el usuario elige salir (opción 4)
+	{
+		Cabecera();										// Llamada a la función que pone la cabecera
+		MenuImprimir();									// Llamada a la función que muestra el menú
+		NumeroElegido = MenuSolicitarNumero();			// Llamada a la función que solicita el número
+		MenuProcesarOpcion(NumeroElegido);				// Llamada a la función que procesa la opción seleccionada
+		// Mensaje "Pulsa una tecla para continuar..."
+		Console.WriteLine("Pulsa una tecla para continuar...");
+		Console.ReadKey();
+		Pie();											// Llamada a la función que pone el pie
+	}
 }
 
 // Llamada al programa principal

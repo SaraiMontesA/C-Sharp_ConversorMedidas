@@ -1,0 +1,14 @@
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\bin\Debug\net8.0\Conversor.exe
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\bin\Debug\net8.0\Conversor.deps.json
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\bin\Debug\net8.0\Conversor.runtimeconfig.json
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\bin\Debug\net8.0\Conversor.dll
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\bin\Debug\net8.0\Conversor.pdb
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\obj\Debug\net8.0\Conversor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\obj\Debug\net8.0\Conversor.AssemblyInfoInputs.cache
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\obj\Debug\net8.0\Conversor.AssemblyInfo.cs
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\obj\Debug\net8.0\Conversor.csproj.CoreCompileInputs.cache
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\obj\Debug\net8.0\Conversor.dll
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\obj\Debug\net8.0\refint\Conversor.dll
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\obj\Debug\net8.0\Conversor.pdb
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\obj\Debug\net8.0\Conversor.genruntimeconfig.cache
+C:\Users\sarai\Documents\Programacion\C#\CsharpProjects\Conversor\obj\Debug\net8.0\ref\Conversor.dll

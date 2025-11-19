@@ -12,12 +12,18 @@
 #region Cabeceras
 	static void Cabecera()
 	{
+		int tiempo = 500;
 		Console.Clear();	// Con esta línea limpiamos la pantalla
 		Console.WriteLine("###################################################################################################");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
 		Console.WriteLine("##########                                                                               ##########");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
 		Console.WriteLine("##########                    Bienvenido al conversor de medidas                         ##########");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
 		Console.WriteLine("##########                                                                               ##########");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
 		Console.WriteLine("###################################################################################################");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
 		Console.WriteLine("");
 	}
 
@@ -30,16 +36,29 @@
 			Console.Write("          ");
 	}
 
-	static void Pie()
+	static void PieGato()
 	{
+		int tiempo = 500;
 		Console.WriteLine("");
 		Console.WriteLine("###################################################################################################");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
 		Console.WriteLine("##########                                                                               ##########");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
 		Console.WriteLine("##########                    Muchas gracias por tu tiempo                               ##########");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
 		Console.WriteLine("##########                                                                               ##########");
-		Console.WriteLine("###################################################################################################");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		Console.WriteLine("##########                   ¡Que tengas un día maravilloso!                             ##########");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		Console.WriteLine("##########                                                               |\\__/,|   (`\\   ##########");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		Console.WriteLine("##########                                                             _.|o o  |_   ) )  ##########");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		Console.WriteLine("######################################################################(((###(((####################");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
 		Console.WriteLine("");
 	}
+
 #endregion
 
 // ###################################################################################
@@ -58,7 +77,6 @@
 		Console.WriteLine("3. Kilogramos a Libras");
 		Sangria(2);
 		Console.WriteLine("4. Salir");
-		Console.WriteLine("");
 	}
 
 	static int MenuSolicitarNumero()
@@ -123,7 +141,7 @@
 		{
 			// no hacer nada; seguir esperando
 		}
-		Console.WriteLine();
+		Console.WriteLine(); // Línea en blanco para separar
 	}
 #endregion
 
@@ -135,15 +153,13 @@
 // ###################################################################################
 	static void MenuOpcion1()
 	{
-		// Lógica para la opción 1
-		Sangria(1);
+		Sangria(2);
 		Console.WriteLine("Has seleccionado convertir Celsius a Fahrenheit.");
 		int cantidad = SolicitarCantidad();
-		int fahrenheit = (cantidad * 9 / 5) + 32;
+		float fahrenheit = (float)(cantidad * 9 / 5) + 32;
 		Console.WriteLine(); // Línea en blanco para separar
-		Sangria(1);
+		Sangria(2);
 		Console.WriteLine($"{cantidad} grados Celsius son {fahrenheit} grados Fahrenheit.");
-		Console.WriteLine(); // Línea en blanco para separar
 		Pausar();
 	}
 
@@ -152,11 +168,13 @@
 // ###################################################################################
 	static void MenuOpcion2()
 	{
-		// Lógica para la opción 2
-		Sangria(1);
+		Sangria(2);
 		Console.WriteLine("Has seleccionado convertir Kilómetros a Millas.");
+		int cantidad = SolicitarCantidad();
+		float millas = (float)(cantidad * 0.621371);
 		Console.WriteLine(); // Línea en blanco para separar
-		Console.WriteLine("Introduce la cantidad a convertir:");
+		Sangria(2);
+		Console.WriteLine($"{cantidad} kilómetros son {millas} millas.");
 		Pausar();
 	}
 
@@ -176,10 +194,12 @@
 // ###################################################################################
 	static void MenuOpcion4()
 	{
-		// Lógica para la opción 4
-		Sangria(1);
+		int tiempo = 500;
+		Sangria(2);
 		Console.WriteLine("Saliendo del programa. ¡Hasta luego!");
-		Pausar();
+		Console.WriteLine("");
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		//Pausar();
 	}
 #endregion
 
@@ -191,27 +211,24 @@
 	{
 		int cantidadConvertir = 0;
 		Console.WriteLine(); // Línea en blanco para separar
-		Sangria(1);
+		Sangria(2);
 		Console.Write("Introduce la cantidad a convertir y pulsa Enter: ");
 		string? input = Console.ReadLine();	// Leer la entrada del usuario
 		cantidadConvertir = ValidarEntrada(input);
 		while (cantidadConvertir <= 0)
 		{
 			Console.WriteLine();
-			Sangria(1);
+			Sangria(2);
 			Console.Write("Cantidad no válida. Por favor, introduce una cantidad: ");
 			string? input2 = Console.ReadLine();	// Leer la entrada del usuario
 			cantidadConvertir = ValidarEntrada(input2);
-		}
-		
+		}		
 		return cantidadConvertir;
 	}
 
 	static int ValidarEntrada(string? input)
 	{
 		int numero = int.TryParse(input, out int result) ? result : 0;
-		//if (numero < 1 || numero > 4)
-		//	return -1; // Indicar que la entrada no es válida
 		return numero;	// Entrada válida
 	}
 #endregion
@@ -232,7 +249,7 @@
 			NumeroElegido = MenuSolicitarNumero();			// Llamada a la función que solicita el número
 			MenuProcesarOpcion(NumeroElegido);				// Llamada a la función que procesa la opción seleccionada
 
-			Pie();											// Llamada a la función que pone el pie
+			PieGato();											// Llamada a la función que pone el pie
 		}
 	}
 #endregion

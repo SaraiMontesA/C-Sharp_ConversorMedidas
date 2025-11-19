@@ -20,15 +20,15 @@
 	{
 		int tiempo = 500;
 		Console.Clear();	// Con esta línea limpiamos la pantalla
-		Console.WriteLine("###################################################################################################");
+		Console.WriteLine("#########################################################################################");
 		PausaCargas();
-		Console.WriteLine("##########                                                                               ##########");
+		Console.WriteLine("##########                                                                     ##########");
 		PausaCargas();
-		Console.WriteLine("##########                    Bienvenido al conversor de medidas                         ##########");
+		Console.WriteLine("##########               Bienvenido al conversor de medidas                    ##########");
 		PausaCargas();
-		Console.WriteLine("##########                                                                               ##########");
+		Console.WriteLine("##########                                                                     ##########");
 		PausaCargas();
-		Console.WriteLine("###################################################################################################");
+		Console.WriteLine("#########################################################################################");
 		PausaCargas();
 		Console.WriteLine("");
 	}
@@ -46,21 +46,21 @@
 	{
 		int tiempo = 500;
 		Console.WriteLine("");
-		Console.WriteLine("###################################################################################################");
+		Console.WriteLine("#########################################################################################");
 		PausaCargas();
-		Console.WriteLine("##########                                                                               ##########");
+		Console.WriteLine("##########                                                                     ##########");
 		PausaCargas();
-		Console.WriteLine("##########                    Muchas gracias por tu tiempo                               ##########");
+		Console.WriteLine("##########               Muchas gracias por tu tiempo                          ##########");
 		PausaCargas();
-		Console.WriteLine("##########                                                                               ##########");
+		Console.WriteLine("##########                                                                     ##########");
 		PausaCargas();
-		Console.WriteLine("##########                   ¡Que tengas un día maravilloso!                             ##########");
+		Console.WriteLine("##########              ¡Que tengas un día maravilloso!                        ##########");
 		PausaCargas();
-		Console.WriteLine("##########                                                               |\\__/,|   (`\\   ##########");
+		Console.WriteLine("##########                                                     |\\__/,|   (`\\   ##########");
 		PausaCargas();
-		Console.WriteLine("##########                                                             _.|o o  |_   ) )  ##########");
+		Console.WriteLine("##########                                                   _.|o o  |_   ) )  ##########");
 		PausaCargas();
-		Console.WriteLine("######################################################################(((###(((####################");
+		Console.WriteLine("############################################################(((###(((####################");
 		PausaCargas();
 		Console.WriteLine("");
 	}

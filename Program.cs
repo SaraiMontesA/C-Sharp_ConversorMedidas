@@ -63,29 +63,23 @@
 
 	static int MenuSolicitarNumero()
 	{
+		int numero = 0;
+		Console.WriteLine(); // Línea en blanco para separar
 		Sangria(1);
 		Console.Write("Selecciona una opción entre 1 y 4 y pulsa Enter: ");
 		string? input = Console.ReadLine();	// Leer la entrada del usuario
-		int numero = MenuValidarEntrada(input);
+		numero = ValidarEntrada(input);
 		while (numero < 1 || numero > 4)
 		{
 			Console.WriteLine();
 			Sangria(1);
 			Console.Write("Opción no válida. Por favor, selecciona una opción entre 1 y 4: ");
 			string? input2 = Console.ReadLine();	// Leer la entrada del usuario
-			numero = MenuValidarEntrada(input2);
+			numero = ValidarEntrada(input2);
 			if (numero >= 1 && numero <= 4)
 				return numero;
 		}
 		return numero;
-	}
-
-	static int MenuValidarEntrada(string? input)
-	{
-		int numero = int.TryParse(input, out int result) ? result : 0;
-		if (numero < 1 || numero > 4)
-			return -1; // Indicar que la entrada no es válida
-		return numero;	// Entrada válida
 	}
 
 	static void MenuProcesarOpcion(int opcion)
@@ -134,6 +128,8 @@
 #endregion
 
 #region OpcionesMenu
+
+
 // ###################################################################################
 // ########## 	Opción 1 - Celsius a Fahrenheit								##########
 // ###################################################################################
@@ -142,6 +138,12 @@
 		// Lógica para la opción 1
 		Sangria(1);
 		Console.WriteLine("Has seleccionado convertir Celsius a Fahrenheit.");
+		int cantidad = SolicitarCantidad();
+		int fahrenheit = (cantidad * 9 / 5) + 32;
+		Console.WriteLine(); // Línea en blanco para separar
+		Sangria(1);
+		Console.WriteLine($"{cantidad} grados Celsius son {fahrenheit} grados Fahrenheit.");
+		Console.WriteLine(); // Línea en blanco para separar
 		Pausar();
 	}
 
@@ -153,6 +155,8 @@
 		// Lógica para la opción 2
 		Sangria(1);
 		Console.WriteLine("Has seleccionado convertir Kilómetros a Millas.");
+		Console.WriteLine(); // Línea en blanco para separar
+		Console.WriteLine("Introduce la cantidad a convertir:");
 		Pausar();
 	}
 
@@ -176,6 +180,39 @@
 		Sangria(1);
 		Console.WriteLine("Saliendo del programa. ¡Hasta luego!");
 		Pausar();
+	}
+#endregion
+
+// ###################################################################################
+// ########## 	Solicitador de cantidad	y validador de entradas				##########
+// ###################################################################################
+#region EntradasUsuario
+	static int SolicitarCantidad()
+	{
+		int cantidadConvertir = 0;
+		Console.WriteLine(); // Línea en blanco para separar
+		Sangria(1);
+		Console.Write("Introduce la cantidad a convertir y pulsa Enter: ");
+		string? input = Console.ReadLine();	// Leer la entrada del usuario
+		cantidadConvertir = ValidarEntrada(input);
+		while (cantidadConvertir <= 0)
+		{
+			Console.WriteLine();
+			Sangria(1);
+			Console.Write("Cantidad no válida. Por favor, introduce una cantidad: ");
+			string? input2 = Console.ReadLine();	// Leer la entrada del usuario
+			cantidadConvertir = ValidarEntrada(input2);
+		}
+		
+		return cantidadConvertir;
+	}
+
+	static int ValidarEntrada(string? input)
+	{
+		int numero = int.TryParse(input, out int result) ? result : 0;
+		//if (numero < 1 || numero > 4)
+		//	return -1; // Indicar que la entrada no es válida
+		return numero;	// Entrada válida
 	}
 #endregion
 

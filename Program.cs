@@ -10,20 +10,26 @@
 // ########## 	Funciones de cabecera, sangría y pie						##########
 // ###################################################################################
 #region Cabeceras
+	static void PausaCargas()
+	{
+		int tiempo = 500;
+		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+	}
+
 	static void Cabecera()
 	{
 		int tiempo = 500;
 		Console.Clear();	// Con esta línea limpiamos la pantalla
 		Console.WriteLine("###################################################################################################");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("##########                                                                               ##########");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("##########                    Bienvenido al conversor de medidas                         ##########");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("##########                                                                               ##########");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("###################################################################################################");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("");
 	}
 
@@ -41,21 +47,21 @@
 		int tiempo = 500;
 		Console.WriteLine("");
 		Console.WriteLine("###################################################################################################");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("##########                                                                               ##########");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("##########                    Muchas gracias por tu tiempo                               ##########");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("##########                                                                               ##########");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("##########                   ¡Que tengas un día maravilloso!                             ##########");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("##########                                                               |\\__/,|   (`\\   ##########");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("##########                                                             _.|o o  |_   ) )  ##########");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("######################################################################(((###(((####################");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
+		PausaCargas();
 		Console.WriteLine("");
 	}
 

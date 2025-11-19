@@ -69,7 +69,8 @@
 		int numero = MenuValidarEntrada(input);
 		while (numero < 1 || numero > 4)
 		{
-			Sangria(2);
+			Console.WriteLine();
+			Sangria(1);
 			Console.Write("Opción no válida. Por favor, selecciona una opción entre 1 y 4: ");
 			string? input2 = Console.ReadLine();	// Leer la entrada del usuario
 			numero = MenuValidarEntrada(input2);
@@ -89,6 +90,7 @@
 
 	static void MenuProcesarOpcion(int opcion)
 	{
+		Console.WriteLine("");	// Línea en blanco para separar
 		switch (opcion)
 		{
 			case 1:	// Lógica para convertir Celsius a Fahrenheit
@@ -109,40 +111,10 @@
 		}
 	}
 
-	static void MenuOpcion1()
-	{
-		// Lógica para la opción 1
-		Sangria(1);
-		Console.WriteLine("Has seleccionado convertir Celsius a Fahrenheit.");
-		Pausar();
-	}
-	
-	static void MenuOpcion2()
-	{
-		// Lógica para la opción 2
-		Sangria(1);
-		Console.WriteLine("Has seleccionado convertir Kilómetros a Millas.");
-		Pausar();
-	}
-
-	static void MenuOpcion3()
-	{
-		// Lógica para la opción 3
-		Sangria(1);
-		Console.WriteLine("Has seleccionado convertir Kilogramos a Libras.");
-		Pausar();
-	}
-
-	static void MenuOpcion4()
-	{
-		// Lógica para la opción 4
-		Sangria(1);
-		Console.WriteLine("Saliendo del programa. ¡Hasta luego!");
-		Pausar();
-	}
-
 	static void Pausar()
 	{
+		Console.WriteLine(); // Línea en blanco para separar
+		
 		Sangria(1);
 		// Mostrar el mensaje en la misma línea y esperar explícitamente la tecla Enter.
 		Console.Write("Pulsa Enter para continuar...");
@@ -158,6 +130,52 @@
 			// no hacer nada; seguir esperando
 		}
 		Console.WriteLine();
+	}
+#endregion
+
+#region OpcionesMenu
+// ###################################################################################
+// ########## 	Opción 1 - Celsius a Fahrenheit								##########
+// ###################################################################################
+	static void MenuOpcion1()
+	{
+		// Lógica para la opción 1
+		Sangria(1);
+		Console.WriteLine("Has seleccionado convertir Celsius a Fahrenheit.");
+		Pausar();
+	}
+
+// ###################################################################################
+// ########## 	Opción 2 - Kilómetros a Millas								##########
+// ###################################################################################
+	static void MenuOpcion2()
+	{
+		// Lógica para la opción 2
+		Sangria(1);
+		Console.WriteLine("Has seleccionado convertir Kilómetros a Millas.");
+		Pausar();
+	}
+
+// ###################################################################################
+// ########## 	Opción 3 - Kilogramos a Libras								##########
+// ###################################################################################
+	static void MenuOpcion3()
+	{
+		// Lógica para la opción 3
+		Sangria(1);
+		Console.WriteLine("Has seleccionado convertir Kilogramos a Libras.");
+		Pausar();
+	}
+
+// ###################################################################################
+// ########## 	Opción 4 - Salir del programa								##########
+// ###################################################################################
+	static void MenuOpcion4()
+	{
+		// Lógica para la opción 4
+		Sangria(1);
+		Console.WriteLine("Saliendo del programa. ¡Hasta luego!");
+		Pausar();
 	}
 #endregion
 

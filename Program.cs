@@ -12,13 +12,12 @@
 #region Cabeceras
 	static void PausaCargas()
 	{
-		int tiempo = 500;
+		int tiempo = 400;
 		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
 	}
 
 	static void Cabecera()
 	{
-		int tiempo = 500;
 		Console.Clear();	// Con esta línea limpiamos la pantalla
 		Console.WriteLine("#########################################################################################");
 		PausaCargas();
@@ -33,6 +32,17 @@
 		Console.WriteLine("");
 	}
 
+	static void CabeceraRapida()
+	{
+		Console.Clear();	// Con esta línea limpiamos la pantalla
+		Console.WriteLine("#########################################################################################");
+		Console.WriteLine("##########                                                                     ##########");
+		Console.WriteLine("##########               Bienvenido al conversor de medidas                    ##########");
+		Console.WriteLine("##########                                                                     ##########");
+		Console.WriteLine("#########################################################################################");
+		Console.WriteLine("");
+	}
+
 	static void Sangria(int sencilla)
 	{
 		if (sencilla == 1)
@@ -44,7 +54,6 @@
 
 	static void PieGato()
 	{
-		int tiempo = 500;
 		Console.WriteLine("");
 		Console.WriteLine("#########################################################################################");
 		PausaCargas();
@@ -54,7 +63,7 @@
 		PausaCargas();
 		Console.WriteLine("##########                                                                     ##########");
 		PausaCargas();
-		Console.WriteLine("##########              ¡Que tengas un día maravilloso!                        ##########");
+		Console.WriteLine("##########              ¡Que tengas un día maravilloso!                   _    ##########");
 		PausaCargas();
 		Console.WriteLine("##########                                                     |\\__/,|   (`\\   ##########");
 		PausaCargas();
@@ -148,6 +157,7 @@
 			// no hacer nada; seguir esperando
 		}
 		Console.WriteLine(); // Línea en blanco para separar
+		Console.WriteLine(); // Línea en blanco para separar
 	}
 #endregion
 
@@ -189,9 +199,13 @@
 // ###################################################################################
 	static void MenuOpcion3()
 	{
-		// Lógica para la opción 3
-		Sangria(1);
+		Sangria(2);
 		Console.WriteLine("Has seleccionado convertir Kilogramos a Libras.");
+		int cantidad = SolicitarCantidad();
+		float libras = (float)(cantidad * 2.20462);
+		Console.WriteLine(); // Línea en blanco para separar
+		Sangria(2);
+		Console.WriteLine($"{cantidad} kilogramos son {libras} libras.");
 		Pausar();
 	}
 
@@ -200,12 +214,9 @@
 // ###################################################################################
 	static void MenuOpcion4()
 	{
-		int tiempo = 500;
 		Sangria(2);
 		Console.WriteLine("Saliendo del programa. ¡Hasta luego!");
-		Console.WriteLine("");
-		System.Threading.Thread.Sleep(tiempo);	// Bloquea el hilo actual durante 500 milisegundos
-		//Pausar();
+		PausaCargas();
 	}
 #endregion
 
@@ -248,15 +259,15 @@
 	{	
 		int NumeroElegido = 0;	// Declaramos una variable de tipo numérico y la inicializamos a 0
 		// Aquí voy a poner el código del main
+		Cabecera();										// Llamada a la función que pone la cabecera
 		while (NumeroElegido != 4)	// Bucle que se repite hasta que el usuario elige salir (opción 4)
 		{
-			Cabecera();										// Llamada a la función que pone la cabecera
+			CabeceraRapida();										// Llamada a la función que pone la cabecera
 			MenuImprimir();									// Llamada a la función que muestra el menú
 			NumeroElegido = MenuSolicitarNumero();			// Llamada a la función que solicita el número
 			MenuProcesarOpcion(NumeroElegido);				// Llamada a la función que procesa la opción seleccionada
-
-			PieGato();											// Llamada a la función que pone el pie
 		}
+		PieGato();											// Llamada a la función que pone el pie
 	}
 #endregion
 
